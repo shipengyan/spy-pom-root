@@ -6,11 +6,18 @@
 
     <groupId>com.github.shipengyan</groupId>
     <artifactId>spy-pom-root</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <name>${project.artifactId}</name>
     <url>https://github.com/shipengyan/spy-pom-root</url>
     <description>spr root pom</description>
+
+    <parent>
+        <groupId>io.spring.platform</groupId>
+        <artifactId>platform-bom</artifactId>
+        <version>Brussels-RELEASE</version>
+    </parent>
+
 
     <licenses>
         <license>
@@ -66,14 +73,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>io.spring.platform</groupId>
-                <artifactId>platform-bom</artifactId>
-                <version>Brussels-RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
