@@ -6,7 +6,7 @@
 
     <groupId>com.github.shipengyan</groupId>
     <artifactId>spy-pom-root</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
@@ -18,7 +18,6 @@
         <artifactId>platform-bom</artifactId>
         <version>Brussels-RELEASE</version>
     </parent>
-
 
     <licenses>
         <license>
@@ -65,15 +64,23 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
-        <cglib.version>2.2</cglib.version>
+        <cglib.version>3.2.4</cglib.version>
         <fastjson.version>1.2.31</fastjson.version>
 
         <dubbo.version>2.8.4</dubbo.version>
         <zkclient.version>0.9</zkclient.version>
+
+        <zxing.version>3.2.1</zxing.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
@@ -122,6 +129,13 @@
                 </exclusions>
             </dependency>
             <!-- dubbo end -->
+
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>javase</artifactId>
+                <version>${zxing.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
